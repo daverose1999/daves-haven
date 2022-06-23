@@ -1,85 +1,113 @@
 import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'
 
-import flowerFrame from '../../assets/74967-paper-summer-shape-flower-border-free-download-png-hq.png'
-import flowerFrame2 from '../../assets/R.png'
-import leaf from '../../assets/tropical-leaf-pattern.png'
-import leaf2 from '../../assets/pdflowerset17-gloy-01_1.png'
+import top1 from '../../assets/section2/16.png'
+import top2 from '../../assets/section2/11.png'
+import top3 from '../../assets/section2/7.png'
+import top4 from '../../assets/section2/6.png'
+import top5 from '../../assets/section2/8.png'
+import top6 from '../../assets/section2/ezgif-3-cfa0e24e09-removebg.png'
+
+
+import bottom1 from '../../assets/section2/9.png'
+import bottom2 from '../../assets/section2/10.png'
+
+
+
+
+
+
+
+
+
+// import flowerFrame from '../../assets/74967-paper-summer-shape-flower-border-free-download-png-hq.png'
+// import flowerFrame2 from '../../assets/R.png'
+// import leaf from '../../assets/tropical-leaf-pattern.png'
+// import leaf2 from '../../assets/pdflowerset17-gloy-01_1.png'
 
 const Container = styled.main`
 
-#section1{
-    position: relative;
-}
+
 
 `
 const Section = styled.section`
+    background-color: #ff3fac;
     width: 100%;
     height: 100vh;
-    background-color: #ff3fac;
-    overflow: hidden;
-
-    .text{
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        letter-spacing: 0.05em;
 
 
-        span{
-            padding: 5px 25px 5px 15px;
-            background-color: #fff;
-            font-size: 5.25em;
-            line-height: 1.7em;
-            color: #4a4a4a;
-            opacity: 0;
-            animation: 4s fade ease-in forwards;
-            animation-delay: calc(1s * var(--fade));
-        }
+
+
+
+`
+const Images = styled.div`
+
+    .top1{
+        top: 0%;
+        left: 33%;
+        width: 37%;
     }
 
-    .flower-frame{
-        position absolute;
-        object-fit: cover;
-        opacity: 0; 
-        width: 100%;
-        height: 100%;
-        z-index: 3;
-        display: inline-block;
-        animation: 2s anim-lineUp ease-in forwards;
-        animation-delay: calc(1s * var(--springUp));
+    .top2{
+        width: 16%;
+        top: 10%;
+        left: 43%;
+        filter: blur(0.5px);
+        -webkit-filter: blur(0.5px);
     }
 
-    .leaf{
-        z-index: 2;
+    .top3{
+        width: 8%;
+        top: 13%;
+        left: 61%;
     }
 
-    .leaf2{
-        z-index: 1;
+    .top4{
+        width: 15%;
+        top: 5%;
+        left: 60%;
+    }
+
+    .top5{
+        top: 0%;
+        right: 8%;
+        width: 22%;
+    }
+
+    .top6{
+        top: 0%;
+        left: 8%;
+        transform: rotate(-32deg);
+        width: 22%;
+    }
+
+    .bottom1{
+        bottom: 8%;
+        left: -5%;
+        width: 23%;
+    }
+
+    .bottom2{
+        bottom: 8%;
+        right: -5%;
+        width: 23%;
     }
 
 
-@keyframes anim-lineUp {
-0% {
-    opacity: 0;
-    transform: scale(1.2, 1.2);
-}
-100% {
-    opacity: 1;
-    transform: scale(1, 1);
-}
-}
+`
+const Text = styled.p`
+    position: absolute;
+    left: 50%;
+    color: #ff3fac;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: -8px -8px -12px rgba(255, 255, 255, 0.1)
+    , 8px 8px 12px rgba(0, 0, 0, 0.1);
+    font-size: 10.0rem;
+`
 
-@keyframes fade {
-0% {
-    opacity: 0;
-}
-100% {
-    opacity: 1;
-}
-}
-
+const Image = styled.img`
+    position: absolute;
 `
 
 
@@ -102,16 +130,24 @@ const Home = () => {
     return (
         <Container >
             <Section id="section1">
-                <p className='text'>
-                    <span style={{ '--fade': 1 }}>"Dream</span>
-                    <br />
-                    <span style={{ '--fade': 2 }}>Big"</span></p>
-                <div>
-                    <img className='flower-frame' style={{'--springUp': 4}} src={flowerFrame} alt='' />
-                    <img className='flower-frame' style={{'--springUp': 3}} src={flowerFrame2} alt='' />
-                    <img className='flower-frame leaf' style={{'--springUp': 2}} src={leaf} alt='' />
-                    <img className='flower-frame leaf2' style={{'--springUp': 1}} src={leaf2} alt='' />
-                </div>
+                <Images className='top'>
+                    <Image className='top1' src={top1} />
+                    <Image className='top2' src={top2} />
+                    <Image className='top3' src={top3} />
+                    <Image className='top4' src={top4} />
+                    <Image className='top5' src={top5} />
+                    <Image className='top6' src={top6} />
+
+
+                </Images>
+                <Text>UI / UX</Text>
+
+                <Images className='bottom'>
+                    <Image className='bottom1' src={bottom1} />
+                    <Image className='bottom2' src={bottom2} />
+                </Images>
+                
+             
             </Section>
              
         </Container>
