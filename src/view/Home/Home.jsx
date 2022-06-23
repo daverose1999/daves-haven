@@ -7,10 +7,18 @@ import top3 from '../../assets/section2/7.png'
 import top4 from '../../assets/section2/6.png'
 import top5 from '../../assets/section2/8.png'
 import top6 from '../../assets/section2/ezgif-3-cfa0e24e09-removebg.png'
+import top7 from '../../assets/section2/17.png'
+
 
 
 import bottom1 from '../../assets/section2/9.png'
 import bottom2 from '../../assets/section2/10.png'
+import bottom3 from '../../assets/section2/12.png'
+import bottom4 from '../../assets/section2/13.png'
+import bottom5 from '../../assets/section2/14.png'
+
+
+
 
 
 
@@ -58,7 +66,7 @@ const Images = styled.div`
 
     .top3{
         width: 8%;
-        top: 13%;
+        top: 18%;
         left: 61%;
     }
 
@@ -81,30 +89,58 @@ const Images = styled.div`
         width: 22%;
     }
 
+    .top7{
+        top: 17%;
+        right: 26%;
+        width: 5%;
+    }
+
     .bottom1{
-        bottom: 8%;
+        bottom: 0%;
         left: -5%;
         width: 23%;
+        z-index: 1;
     }
 
     .bottom2{
-        bottom: 8%;
-        right: -5%;
+        bottom: 0%;
+        right: -0%;
         width: 23%;
+        z-index: 1;
     }
 
+    .bottom3{
+        bottom: 10%;
+        left: 20%;
+        width: 15%;
+    }
+
+     .bottom4{
+       bottom: 20%;
+        right: 5%;
+        width: 10%;
+        filter: blur(0.5px);
+        -webkit-filter: blur(0.5px);
+    }
+
+    .bottom5{
+       bottom: 20%;
+        left: 5%;
+        filter: blur(0.5px);
+        -webkit-filter: blur(0.5px);
+    }
 
 `
-const Text = styled.p`
-    position: absolute;
-    left: 50%;
-    color: #ff3fac;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-shadow: -8px -8px -12px rgba(255, 255, 255, 0.1)
-    , 8px 8px 12px rgba(0, 0, 0, 0.1);
-    font-size: 10.0rem;
-`
+// const Text = styled.p`
+//     position: absolute;
+//     left: 50%;
+//     color: #ff3fac;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+//     text-shadow: -8px -8px -12px rgba(255, 255, 255, 0.1)
+//     , 8px 8px 12px rgba(0, 0, 0, 0.1);
+//     font-size: 10.0rem;
+// `
 
 const Image = styled.img`
     position: absolute;
@@ -137,14 +173,14 @@ const Home = () => {
                     <Image className='top4' src={top4} />
                     <Image className='top5' src={top5} />
                     <Image className='top6' src={top6} />
-
-
+                    <Image className='top7' src={top7} />
                 </Images>
-                <Text>UI / UX</Text>
-
                 <Images className='bottom'>
                     <Image className='bottom1' src={bottom1} />
                     <Image className='bottom2' src={bottom2} />
+                    <Image className='bottom3' src={bottom3} />
+                    <Image className='bottom4' src={bottom4} />
+                    <Image className='bottom5' src={bottom5} />
                 </Images>
                 
              
@@ -154,4 +190,4 @@ const Home = () => {
     )
 }
 
-export {Home}
+export { Home }
