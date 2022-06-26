@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react'
-import styled from 'styled-components'
 
 import top1 from '../../assets/section2/16.png'
 import top2 from '../../assets/section2/11.png'
@@ -10,149 +9,32 @@ import top6 from '../../assets/section2/ezgif-3-cfa0e24e09-removebg.png'
 import top7 from '../../assets/section2/17.png'
 import top8 from '../../assets/section2/[removal.ai]_tmp-62b5a4e35d48c.png'
 import top9 from '../../assets/section2/html.webp'
-
+import top10 from '../../assets/section2/19.png'
+import top11 from '../../assets/section2/3-removebg-preview.png'
+import top12 from '../../assets/section2/2.png'
+import top13 from '../../assets/section2/1.png'
+import top14 from '../../assets/section2/4.png'
+import top15 from '../../assets/section2/3.png'
+import top16 from '../../assets/section2/24.png'
+import top17 from '../../assets/section2/25.png'
+import top18 from '../../assets/section2/[removal.ai]_tmp-62b7562603c78.png'
+import top19 from '../../assets/section2/13.png'
 
 import bottom1 from '../../assets/section2/9.png'
 import bottom2 from '../../assets/section2/10.png'
 import bottom3 from '../../assets/section2/12.png'
 import bottom4 from '../../assets/section2/vuejs.webp'
 import bottom5 from '../../assets/section2/react.png'
-import bottom6 from '../../assets/section2/css.webp'
+import bottom6 from '../../assets/section2/css.png'
+import bottom7 from '../../assets/section2/18.png'
+import bottom8 from '../../assets/section2/22.png'
+import bottom9 from '../../assets/section2/UI-UX-6-25-2022 (1).png'
+import bottom10 from '../../assets/section2/20.png'
+import bottom11 from '../../assets/section2/rocket.webp'
+
 import shadow from '../../assets/section2/shadow.png'
-
-
-const Container = styled.main`
-
-`
-const Section = styled.section`
-    background-color: #ff3fac;
-    width: 100%;
-    height: 100vh;
-`
-const Images = styled.div`
-
-    .top1{
-        top: 0%;
-        left: 33%;
-        width: 37%;
-    }
-
-    .top2{
-        width: 16%;
-        top: 10%;
-        left: 43%;
-        filter: blur(0.5px);
-        -webkit-filter: blur(0.5px);
-    }
-
-    .top3{
-        width: 8%;
-        top: 18%;
-        left: 61%;
-    }
-
-    .top4{
-        width: 15%;
-        top: 5%;
-        left: 60%;
-    }
-
-    .top5{
-        top: 0%;
-        right: 8%;
-        width: 22%;
-    }
-
-    .top6{
-        top: 0%;
-        left: 10%;
-        transform: rotate(-32deg);
-        width: 22%;
-        z-index: 1
-    }
-
-    .top7{
-        top: 17%;
-        right: 26%;
-        width: 5%;
-    }
-
-    .top8{
-        top: 15%;
-        left: 27%;
-        width: 15%;
-        filter: blur(3px);
-        -webkit-filter: blur(3px);
-    }
-
-    .top9{
-        top: 5%;
-        right: 2%;
-        width: 15%;
-        transform: rotate(60deg);
-        filter: blur(2px);
-        -webkit-filter: blur(2px);
-    }
-
-    .bottom1{
-        bottom: 0%;
-        left: -5%;
-        width: 23%;
-        z-index: 1;
-    }
-
-    .bottom2{
-        bottom: 0%;
-        right: 0%;
-        width: 23%;
-        z-index: 1;
-    }
-
-    .bottom3{
-        bottom: 10%;
-        left: 25%;
-        width: 15%;
-    }
-
-     .bottom4{
-       bottom: 10%;
-        right: 0%;
-        width: 15%;
-
-    }
-
-    .bottom5{
-        bottom: 0%;
-        right: 15%;
-        width: 15%;
-    }
-
-
-    .bottom6{
-        position: absolute;
-        bottom: 5%;
-        left: 10%;
-        width: 15%;
- 
-        img{
-            bottom: 0;
-            position: absolute;
-            width: 100%;
-        }
-
-        .image{
-            transform: rotate(30deg);
-        }
-
-        .shadow{
-            opacity: 0.3;
-        }
-    }
-`
-
-const Image = styled.img`
-    position: absolute;
-`
+// import avatar from '../../assets/section2/1.glb'
+import { Container, Text, Images, Image, Section } from './styles'
 
 
 const Home = () => {
@@ -184,8 +66,21 @@ const Home = () => {
                     <Image className='top7' src={top7} />
                     <Image className='top8' src={top8} />
                     <Image className='top9' src={top9} />
-                </Images>
+                    <Image className='top10' src={top10} />
+                    <Image className='top11' src={top11} />
+                    <Image className='top12' src={top12} />
+                    <Image className='top13' src={top13} />
+                    <Image className='top14' src={top14} />
+                    <Image className='top15' src={top15} />
+                    <Image className='top16' src={top16} />
+                    <Image className='top17' src={top17} />
+                    <Image className='top18' src={top18} />
+                    <Image className='top19' src={top19} />
 
+                </Images>
+                <Text><h1>Dave's
+                    <br/>
+                    Haven</h1></Text>
                 <Images className='bottom'>
                     <Image className='bottom1' src={bottom1} />
                     <Image className='bottom2' src={bottom2} />
@@ -196,11 +91,16 @@ const Home = () => {
                         <Image className='image' src={bottom6} />
                         <Image className='shadow' src={shadow} />
                     </div>
-                </Images>
-                
-             
+                    <Image className='bottom7' src={bottom7} />
+                    <Image className='bottom8' src={bottom8} />
+                    <Image className='bottom9' src={bottom9} />
+                    <Image className='bottom10' src={bottom10} />
+                    <Image className='bottom11' src={bottom11} />
+            </Images>
             </Section>
-             
+            <Section id='section2'>
+                <model-viewer src='../../assets/section2/1.glb' alt="VR Headset" auto-rotate camera-controls ar ios-src='../../assets/section2/1.glb'></model-viewer>
+            </Section>
         </Container>
     )
 }
