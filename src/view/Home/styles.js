@@ -8,14 +8,11 @@ export const Container = styled.main`
 
     #section2{
         background-color: #00b7d5;
-        model-viewer {
-            height: 600px;
-            width: 600px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            border: none;
-}
+      
+            .avatar{
+                width: 400px;
+                height: 400px;
+            }
 
     }
 `

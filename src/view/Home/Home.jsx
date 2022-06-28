@@ -33,7 +33,7 @@ import bottom10 from '../../assets/section2/20.png'
 import bottom11 from '../../assets/section2/rocket.webp'
 
 import shadow from '../../assets/section2/shadow.png'
-// import avatar from '../../assets/section2/1.glb'
+import avatar from '../../assets/section2/ReadyPlayerMe-Avatar.png'
 import { Container, Text, Images, Image, Section } from './styles'
 
 
@@ -99,7 +99,7 @@ const Home = () => {
             </Images>
             </Section>
             <Section id='section2'>
-                <model-viewer src='../../assets/section2/1.glb' alt="VR Headset" auto-rotate camera-controls ar ios-src='../../assets/section2/1.glb'></model-viewer>
+                <img className='avatar' src={avatar} alt=''/>
             </Section>
         </Container>
     )
