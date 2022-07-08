@@ -35,8 +35,8 @@ import bottom11 from '../../assets/section2/rocket.webp'
 import shadow from '../../assets/section2/shadow.png'
 import avatar from '../../assets/section2/ReadyPlayerMe-Avatar.png'
 import glasses from '../../assets/section2/[removal.ai]_tmp-62b8634ae8f7a.png'
-import hi from '../../assets/section2/22455f7a900bd190434513f81626ca59.png_wh300-removebg-preview.png' 
-// import hi from '../../assets/section2/Hello.png'
+// import hi from '../../assets/section2/22455f7a900bd190434513f81626ca59.png_wh300-removebg-preview.png' 
+import hi from '../../assets/section2/Hello.png'
 
 
 
@@ -64,7 +64,7 @@ const Home = () => {
         <Container >
             <Section id="section1">
                 <Images className='top'>
-                    {/* <Image className='top1' src={top1} /> */}
+                    <Image className='top1' src={top1} />
                     <Image className='top2' src={top2} />
                     <Image className='top3' src={top3} />
                     <Image className='top4' src={top4} />
@@ -86,9 +86,10 @@ const Home = () => {
 
                 </Images>
                 <Text>
+                    <div className='box'></div>
                     <h1>Da<span>ve</span>'s
-                        H<span>a</span>v
-                        <span>e</span>n
+                        <br/>
+                        H<span>a</span>ven
                     </h1>
                 </Text>
                 <Images className='bottom'>

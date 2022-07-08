@@ -2,10 +2,13 @@ import styled from 'styled-components'
 
 
 export const Container = styled.main`
+box-sizing: border-box;
+
 font-family: 'Sacramento', cursive;
+    
     #section1{
        background-image: linear-gradient(to bottom, #e80386 0%,#ff36a8 49%,#ff42ae 100%);
-    background-color: #ff3fac;    
+        background-color: #ff3fac;    
     }
 
     #section2{
@@ -45,7 +48,7 @@ export const Images = styled.div`
 
     .top1{
         top: 0%;
-        left: 33%;
+        left: 35%;
         width: 37%;
     }
 
@@ -90,7 +93,7 @@ export const Images = styled.div`
     .top7{
         top: 12%;
         right: 26%;
-        width: 5%;
+        width: 4%;
         z-index: 1
     }
 
@@ -287,27 +290,34 @@ export const Text = styled.div`
     width: fit-content;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%) skew(-5deg) rotate(-2deg);
-    -webkit-transform: translate(-50%, -50%) skew(-5deg) rotate(-2deg);
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
     z-index: 1;
     text-align: center;
     user-select: none;
 }
 
+
 h1{
   font: 400 19vh "Sacramento";
-  color: #fee;
-  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff42ae, 0 0 0.5em #ff42ae, 0 0 0.1em #00b7d5, 0 10px 3px #36454F;
+  color: #fff;
+  margin: 0;
+  padding: 50px;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff42ae, 0 0 0.5em #FF4949, 0 0 0.1em #F806CC, 0 10px 3px #36454F;
+  line-height: 100%;
+  transform:  rotate(-2deg);
+  -webkit-transform: rotate(-2deg);
 }
+
 h1 span{
   animation: blink linear infinite 2s;
 }
+
 h1 span:nth-of-type(2){
   animation: blink linear infinite 3s;
 }
-h1 span:nth-of-type(3){
-  animation: blink linear infinite 4s;
-}
+
+
 @keyframes blink {
   78% {
     color: inherit;
