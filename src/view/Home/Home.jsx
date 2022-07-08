@@ -34,6 +34,13 @@ import bottom11 from '../../assets/section2/rocket.webp'
 
 import shadow from '../../assets/section2/shadow.png'
 import avatar from '../../assets/section2/ReadyPlayerMe-Avatar.png'
+import glasses from '../../assets/section2/[removal.ai]_tmp-62b8634ae8f7a.png'
+import hi from '../../assets/section2/22455f7a900bd190434513f81626ca59.png_wh300-removebg-preview.png' 
+// import hi from '../../assets/section2/Hello.png'
+
+
+
+
 import { Container, Text, Images, Image, Section } from './styles'
 
 
@@ -57,11 +64,11 @@ const Home = () => {
         <Container >
             <Section id="section1">
                 <Images className='top'>
-                    <Image className='top1' src={top1} />
+                    {/* <Image className='top1' src={top1} /> */}
                     <Image className='top2' src={top2} />
                     <Image className='top3' src={top3} />
                     <Image className='top4' src={top4} />
-                    <Image className='top5' src={top5} />
+                    {/* <Image className='top5' src={top5} /> */}
                     <Image className='top6' src={top6} />
                     <Image className='top7' src={top7} />
                     <Image className='top8' src={top8} />
@@ -69,18 +76,21 @@ const Home = () => {
                     <Image className='top10' src={top10} />
                     <Image className='top11' src={top11} />
                     <Image className='top12' src={top12} />
-                    <Image className='top13' src={top13} />
-                    <Image className='top14' src={top14} />
-                    <Image className='top15' src={top15} />
+                    {/* <Image className='top13' src={top13} /> */}
+                    {/* <Image className='top14' src={top14} /> */}
+                    {/* <Image className='top15' src={top15} /> */}
                     <Image className='top16' src={top16} />
                     <Image className='top17' src={top17} />
                     <Image className='top18' src={top18} />
                     <Image className='top19' src={top19} />
 
                 </Images>
-                <Text><h1>Dave's
-                    <br/>
-                    Haven</h1></Text>
+                <Text>
+                    <h1>Da<span>ve</span>'s
+                        H<span>a</span>v
+                        <span>e</span>n
+                    </h1>
+                </Text>
                 <Images className='bottom'>
                     <Image className='bottom1' src={bottom1} />
                     <Image className='bottom2' src={bottom2} />
@@ -91,15 +101,17 @@ const Home = () => {
                         <Image className='image' src={bottom6} />
                         <Image className='shadow' src={shadow} />
                     </div>
-                    <Image className='bottom7' src={bottom7} />
+                    {/* <Image className='bottom7' src={bottom7} /> */}
                     <Image className='bottom8' src={bottom8} />
-                    <Image className='bottom9' src={bottom9} />
+                    {/* <Image className='bottom9' src={bottom9} /> */}
                     <Image className='bottom10' src={bottom10} />
-                    <Image className='bottom11' src={bottom11} />
+                    {/* <Image className='bottom11' src={bottom11} /> */}
             </Images>
             </Section>
             <Section id='section2'>
-                <img className='avatar' src={avatar} alt=''/>
+                <Image className='avatar' src={avatar} alt='' />
+                <Image className='glasses' alt='' src={glasses} />
+                <Image className='hi' alt='' src={hi} />
             </Section>
         </Container>
     )
