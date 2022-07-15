@@ -4,7 +4,7 @@ import top1 from '../../assets/section2/16.png'
 import top2 from '../../assets/section2/11.png'
 import top3 from '../../assets/section2/7.png'
 import top4 from '../../assets/section2/6.png'
-import top5 from '../../assets/section2/8.png'
+// import top5 from '../../assets/section2/8.png'
 import top6 from '../../assets/section2/ezgif-3-cfa0e24e09-removebg.png'
 import top7 from '../../assets/section2/17.png'
 import top8 from '../../assets/section2/[removal.ai]_tmp-62b5a4e35d48c.png'
@@ -12,9 +12,9 @@ import top9 from '../../assets/section2/html.webp'
 import top10 from '../../assets/section2/19.png'
 import top11 from '../../assets/section2/3-removebg-preview.png'
 import top12 from '../../assets/section2/2.png'
-import top13 from '../../assets/section2/1.png'
-import top14 from '../../assets/section2/4.png'
-import top15 from '../../assets/section2/3.png'
+// import top13 from '../../assets/section2/1.png'
+// import top14 from '../../assets/section2/4.png'
+// import top15 from '../../assets/section2/3.png'
 import top16 from '../../assets/section2/24.png'
 import top17 from '../../assets/section2/25.png'
 import top18 from '../../assets/section2/[removal.ai]_tmp-62b7562603c78.png'
@@ -26,22 +26,24 @@ import bottom3 from '../../assets/section2/12.png'
 import bottom4 from '../../assets/section2/vuejs.webp'
 import bottom5 from '../../assets/section2/react.png'
 import bottom6 from '../../assets/section2/css.png'
-import bottom7 from '../../assets/section2/18.png'
+// import bottom7 from '../../assets/section2/18.png'
 import bottom8 from '../../assets/section2/22.png'
-import bottom9 from '../../assets/section2/UI-UX-6-25-2022 (1).png'
+// import bottom9 from '../../assets/section2/UI-UX-6-25-2022 (1).png'
 import bottom10 from '../../assets/section2/20.png'
-import bottom11 from '../../assets/section2/rocket.webp'
+// import bottom11 from '../../assets/section2/rocket.webp'
 
 import shadow from '../../assets/section2/shadow.png'
 import avatar from '../../assets/section2/ReadyPlayerMe-Avatar.png'
-import glasses from '../../assets/section2/[removal.ai]_tmp-62b8634ae8f7a.png'
+// import avatar3d from '../../assets/section2/avatar.glb'
+
+import holo from '../../assets/section2/holographic-projection.png'
+
+   
 // import hi from '../../assets/section2/22455f7a900bd190434513f81626ca59.png_wh300-removebg-preview.png' 
-import hi from '../../assets/section2/Hello.png'
+// import hi from '../../assets/section2/Hello.png'
 
 
-
-
-import { Container, Text, Images, Image, Section } from './styles'
+import { Container, Text, Images, Image, Section, About } from './styles'
 
 
 const Home = () => {
@@ -110,9 +112,36 @@ const Home = () => {
             </Images>
             </Section>
             <Section id='section2'>
-                <Image className='avatar' src={avatar} alt='' />
-                <Image className='glasses' alt='' src={glasses} />
-                <Image className='hi' alt='' src={hi} />
+                <div className="card">
+                    <figure>
+                    <Image className='avatar ' src={avatar} alt='' />
+                    <Image className='avatar ' src={avatar} alt='' />
+                    <Image className='avatar ' src={avatar} alt='' />
+                    <Image className='avatar ' src={avatar} alt='' />
+                    <Image className='avatar ' src={avatar} alt='' />
+                    <Image className='avatar ' src={avatar} alt='' />
+                    <Image className='avatar ' src={avatar} alt='' />
+                    {/* <div id="aSide">
+                            <model-viewer className='avatar' src={avatar3d} alt="VR Headset" auto-rotate camera-controls ar ios-src={avatar3d}></model-viewer>
+                    </div> */}
+                    </figure>
+                </div>
+                <div className='projector'>
+                    <Image className='holoContainer' src={holo} alt='' />
+                    <div className="holo"></div>
+                </div>
+                <About>
+                    <h1>Hi</h1>
+                    <p>I'm Hologram-Daverose but you can call me holo-Dave.</p>
+                    <p>I'm a UI/UX designer and front-end developer from Sierra Leonean but i work in Ghana.</p>
+                    <p>I love working with crazy colours and shapes, but that that doesn't mean i don't like normal things 😂.</p>
+                    <p>Normal designs done right can be cool too. but I love making random elements work to give a visually pleasing experience.</p>
+                    <p>When i am not coding or daydreaming of crazy designs. I love to read cheesy novels and movies, no genre preference</p>
+                    <p>Not the ones that try not to be smart or take themselves seriously, the self aware ones. They know they are bad and they give it all they've got.</p>
+                    <p>I respect that</p>
+                    <p>I made my holo-Dave wear glasses coz i want to show you that i am a cool and quirky babe.</p>
+                    <p>That was a lie, holo-Dave's eye are creepy and they were lowley staring into my soul.</p>
+                </About>
             </Section>
         </Container>
     )
