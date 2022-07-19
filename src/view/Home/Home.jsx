@@ -63,7 +63,7 @@ const Home = () => {
 
 
     return (
-        <Container >
+        <Container dir="ltr" >
             <Section id="section1">
                 <Images className='top'>
                     <Image className='top1' src={top1} />
@@ -111,27 +111,51 @@ const Home = () => {
                     {/* <Image className='bottom11' src={bottom11} /> */}
             </Images>
             </Section>
-            <Section id='section2'>
-                <div className="card">
-                    <figure>
-                    <Image className='avatar ' src={avatar} alt='' />
-                    <Image className='avatar ' src={avatar} alt='' />
-                    <Image className='avatar ' src={avatar} alt='' />
-                    <Image className='avatar ' src={avatar} alt='' />
-                    <Image className='avatar ' src={avatar} alt='' />
-                    <Image className='avatar ' src={avatar} alt='' />
-                    <Image className='avatar ' src={avatar} alt='' />
-                    {/* <div id="aSide">
-                            <model-viewer className='avatar' src={avatar3d} alt="VR Headset" auto-rotate camera-controls ar ios-src={avatar3d}></model-viewer>
-                    </div> */}
-                    </figure>
-                </div>
-                <div className='projector'>
-                    <Image className='holoContainer' src={holo} alt='' />
-                    <div className="holo"></div>
-                </div>
+        <Section id='section2'>
+          <div className='hologram'>
+            <div className="card">
+                <figure>
+                <Image className='avatar ' src={avatar} alt='' />
+                <Image className='avatar ' src={avatar} alt='' />
+                <Image className='avatar ' src={avatar} alt='' />
+                <Image className='avatar ' src={avatar} alt='' />
+                <Image className='avatar ' src={avatar} alt='' />
+                <Image className='avatar ' src={avatar} alt='' />
+                <Image className='avatar ' src={avatar} alt='' />
+                {/* <div id="aSide">
+                        <model-viewer className='avatar' src={avatar3d} alt="VR Headset" auto-rotate camera-controls ar ios-src={avatar3d}></model-viewer>
+                </div> */}
+                </figure>
+            </div>
+            <div className='projector'>
+                <Image className='holoContainer' src={holo} alt='' />
+                <div className="holo"></div>
+            </div>
+          </div>
                 <About>
-                    <h1>Hi</h1>
+              <div className='fakeMenu'>
+                 <div>
+                <div className="fakeButtons fakeClose"></div>
+                <div className="fakeButtons fakeMinimize"></div>
+                <div className="fakeButtons fakeZoom"></div>
+              </div>
+              <div>
+                About Me
+              </div>
+              </div>
+            <div className="fakeScreen">
+              <p className="line1">&#91;&nbsp;&ldquo;Dave's Haven v0.1&rdquo;,<span className="cursor1">_</span></p>
+              <p className="line1">&#91;&nbsp;&ldquo;Copyright ©2022, Daveisagirl Inc.&rdquo;,<span className="cursor1">_</span></p>
+
+              
+
+              <p className="line1">&#91;&nbsp;&ldquo;I'm a web developer.&rdquo;,<span className="cursor1">_</span></p>
+              
+                <p className="line2">&nbsp;&nbsp;&ldquo;I'm a web designer.&rdquo;,<span className="cursor2">_</span></p>
+                <p className="line3">&nbsp;&nbsp;&ldquo;Let's work together!&rdquo;&nbsp;&#93;<span className="cursor3">_</span></p>
+                <p className="line4">&gt;<span className="cursor4">_</span></p>
+              </div>
+                    {/* <h1>Hi</h1>
                     <p>I'm Hologram-Daverose but you can call me holo-Dave.</p>
                     <p>I'm a UI/UX designer and front-end developer from Sierra Leonean but i work in Ghana.</p>
                     <p>I love working with crazy colours and shapes, but that that doesn't mean i don't like normal things 😂.</p>
@@ -140,7 +164,7 @@ const Home = () => {
                     <p>Not the ones that try not to be smart or take themselves seriously, the self aware ones. They know they are bad and they give it all they've got.</p>
                     <p>I respect that</p>
                     <p>I made my holo-Dave wear glasses coz i want to show you that i am a cool and quirky babe.</p>
-                    <p>That was a lie, holo-Dave's eye are creepy and they were lowley staring into my soul.</p>
+                    <p>That was a lie, holo-Dave's eye are creepy and they were lowley staring into my soul.</p> */}
                 </About>
             </Section>
         </Container>
