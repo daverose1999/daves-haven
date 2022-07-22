@@ -153,6 +153,7 @@ scroll-snap-type: y mandatory;
 `
 export const Section = styled.section`
     position: relative;
+    scroll-snap-align: start;
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -948,9 +949,12 @@ h1 span:nth-of-type(2){
 
 export const About = styled.div`
     position: absolute;
-    width: 30%;
+    width: 35%;
     top: 100px;
     right: 100px;
+    box-shadow: 6px 2px 22px -7px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 2px 22px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 2px 22px -7px rgba(0,0,0,0.75);
 
     .fakeButtons {
     height: 10px;
@@ -986,12 +990,13 @@ export const About = styled.div`
         height: 25px;
         background-color: #bbb;
         margin: 0 auto;
+        text-align: center;
         border-top-right-radius: 5px;
         border-top-left-radius: 5px;
 
         div{
             font-family: 'Source Code Pro', sans-serif;
-              color: #4c4c4c;
+            color: #4c4c4c;
         }
     }
 
@@ -1005,16 +1010,18 @@ export const About = styled.div`
     border-bottom-right-radius: 5px;
     }
 
+    h1{
+      font-size: 14px;
+      font-family: monospace;
+      font-weight: normal;
+    }
+
     p {
     position: relative;
-    // left: 50%;
-    // margin-left: -8.5em;
     text-align: left;
-    font-size: 1.25em;
+    font-size: 14px;
     font-family: monospace;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
+    color: #fff;
     }
 
     span {
@@ -1022,159 +1029,81 @@ export const About = styled.div`
     font-weight: bold;
     }
 
-    .line1 {
-    color: #9CD9F0;
-    -webkit-animation: type .5s 1s steps(20, end) forwards;
-    -moz-animation: type .5s 1s steps(20, end) forwards;
-    -o-animation: type .5s 1s steps(20, end) forwards;
-    animation: type .5s 1s steps(20, end) forwards;
-    }
+     input {
+            background: transparent;
+            border: none;
+            color: #fff;
+            cursor: default;
+            font-family: monospace;
+            font-size: 14px;
+            padding: 0;
+            caret-shape: underscore;
 
-    .cursor1 {
-    -webkit-animation: blink 1s 2s 2 forwards;
-    -moz-animation: blink 1s 2s 2 forwards;
-    -o-animation: blink 1s 2s 2 forwards;
-    animation: blink 1s 2s 2 forwards;
-    }
+            
+            &:focus {
+               border: none;
+               outline: none;
+            }         
+         }
 
-    .line2 {
-    color: #CDEE69;
-    -webkit-animation: type .5s 4.25s steps(20, end) forwards;
-    -moz-animation: type .5s 4.25s steps(20, end) forwards;
-    -o-animation: type .5s 4.25s steps(20, end) forwards;
-    animation: type .5s 4.25s steps(20, end) forwards;
-    }
+        input > span {
+          animation: blink 1s step-end infinite;
+          border-bottom: 2px solid white;
+        }
 
-    .cursor2 {
-    -webkit-animation: blink 1s 5.25s 2 forwards;
-    -moz-animation: blink 1s 5.25s 2 forwards;
-    -o-animation: blink 1s 5.25s 2 forwards;
-    animation: blink 1s 5.25s 2 forwards;
-    }
+        @keyframes blink {
+          from,
+          to {
+            border-color: transparent;
+          }
+          50% {
+            border-color: #fff;
+          }
+        }
 
-    .line3 {
-    color: #E09690;
-    -webkit-animation: type .5s 7.5s steps(20, end) forwards;
-    -moz-animation: type .5s 7.5s steps(20, end) forwards;
-    -o-animation: type .5s 7.5s steps(20, end) forwards;
-    animation: type .5s 7.5s steps(20, end) forwards;
-    }
+.color1 {
+  color: #9CD9F0;
+}
 
-    .cursor3 {
-    -webkit-animation: blink 1s 8.5s 2 forwards;
-    -moz-animation: blink 1s 8.5s 2 forwards;
-    -o-animation: blink 1s 8.5s 2 forwards;
-    animation: blink 1s 8.5s 2 forwards;
-    }
+.color2 {
+  color: #CDEE69;
+  
+}
 
-    .line4 {
-    color: #fff;
-    -webkit-animation: type .5s 10.75s steps(20, end) forwards;
-    -moz-animation: type .5s 10.75s steps(20, end) forwards;
-    -o-animation: type .5s 10.75s steps(20, end) forwards;
-    animation: type .5s 10.75s steps(20, end) forwards;
-    }
+.color3 {
+  color: #E09690;
+}
 
-    .cursor4 {
-    -webkit-animation: blink 1s 11.5s infinite;
-    -moz-animation: blink 1s 8.5s infinite;
-    -o-animation: blink 1s 8.5s infinite;
-    animation: blink 1s 8.5s infinite;
-    }
+.color4 {
+  color: #9690E0;
+}
 
-    @-webkit-keyframes blink {
-    0% {
-        opacity: 0;
-    }
-    40% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-    }
+// .line1 {
+//   color: #9CD9F0;
+// }
 
-    @-moz-keyframes blink {
-    0% {
-        opacity: 0;
-    }
-    40% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-    }
+// .line2 {
+//   color: #CDEE69;
+// }
 
-    @-o-keyframes blink {
-    0% {
-        opacity: 0;
-    }
-    40% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-    }
+// .line3 {
+//   color: #E09690;
+// }
 
-    @keyframes blink {
-    0% {
-        opacity: 0;
-    }
-    40% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-    }
+// .line4 {
+//   color: #9690E0;
+// }
+// .line5 {
+//   color: #3FFF92;
+// }
+// .line6 {
+//   color: #EFA310;
+// }
+// .line7 {
+//   color: #EF105C;
+// }
 
-    @-webkit-keyframes type {
-    to {
-        width: 17em;
-    }
-    }
-
-    @-moz-keyframes type {
-    to {
-        width: 17em;
-    }
-    }
-
-    @-o-keyframes type {
-    to {
-        width: 17em;
-    }
-    }
-
-    @keyframes type {
-    to {
-        width: 17em;
-    }
-    }
+// .line8 {
+//   color: #F6F109;
+// }
 `

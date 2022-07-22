@@ -38,7 +38,7 @@ import avatar from '../../assets/section2/ReadyPlayerMe-Avatar.png'
 
 import holo from '../../assets/section2/holographic-projection.png'
 
-   
+import CV from '../../assets/resume/Profile.pdf';
 // import hi from '../../assets/section2/22455f7a900bd190434513f81626ca59.png_wh300-removebg-preview.png' 
 // import hi from '../../assets/section2/Hello.png'
 
@@ -49,6 +49,8 @@ import { Container, Text, Images, Image, Section, About } from './styles'
 const Home = () => {
    
   const [scrollValue, setScrollValue] = useState(0);
+  const [message, setMessage] = useState('');
+
 
   useEffect(() => {
 
@@ -61,6 +63,17 @@ const Home = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, [scrollValue]);
 
+
+  const handleChange = event => {
+    if (event.target.value.includes('yes'))
+    {
+      setMessage("download");
+    }
+
+    else {
+      setMessage("no");
+    }
+    };
 
     return (
         <Container dir="ltr" >
@@ -144,25 +157,40 @@ const Home = () => {
               </div>
               </div>
             <div className="fakeScreen">
-              <p className="line1">&#91;&nbsp;&ldquo;Dave's Haven v0.1&rdquo;,<span className="cursor1">_</span></p>
-              <p className="line1">&#91;&nbsp;&ldquo;Copyright ©2022, Daveisagirl Inc.&rdquo;,<span className="cursor1">_</span></p>
+              <h1 className="line1 color1">Dave's Haven v0.1
+              <br/>Copyright ©2022, Daveisagirl Inc.</h1>
+             
+              <p className="line2 color2">I'm Daverose Tholley but you can call me Dave</p>
+              <p className="line3 color2">I'm a Sierra Leonean UI/UX designer and front-end developer but i work in Ghana.</p>
+              <p className="line4 color2">I love working with crazy colours and shapes, but that that doesn't mean i don't like normal things 😂.</p>
+              <p className="line5 color2">Normal designs done right can be cool too. but I love making random elements work to give a visually pleasing experience.</p>
+              <p className="line6 color2">When i am not coding or daydreaming of crazy designs. I love to read cheesy novels and movies, no genre preference</p>
+              <p className="line7 color2">Not the ones that try not to be smart or take themselves seriously, the self aware ones. They know they are bad and they give it all they've got.</p>
+              <p className="line8 color3">I respect that!</p>
+              <p className="line8 color4">Do you want to download my CV? (type 'yes' or 'no')  </p>
+              <p className="line10">&gt; <input type="text" onChange={handleChange} autoFocus/></p>
 
-              
+              {message === 'download' &&
+                (
+                  <div>
+                    <button onClick={onClick} download>
+                      Click to download
+                    </button>
+                  </div>
+                )
+              }
+        
+              <p className="line9">Let's work together!</p>
 
-              <p className="line1">&#91;&nbsp;&ldquo;I'm a web developer.&rdquo;,<span className="cursor1">_</span></p>
-              
-                <p className="line2">&nbsp;&nbsp;&ldquo;I'm a web designer.&rdquo;,<span className="cursor2">_</span></p>
-                <p className="line3">&nbsp;&nbsp;&ldquo;Let's work together!&rdquo;&nbsp;&#93;<span className="cursor3">_</span></p>
-                <p className="line4">&gt;<span className="cursor4">_</span></p>
               </div>
                     {/* <h1>Hi</h1>
                     <p>I'm Hologram-Daverose but you can call me holo-Dave.</p>
-                    <p>I'm a UI/UX designer and front-end developer from Sierra Leonean but i work in Ghana.</p>
-                    <p>I love working with crazy colours and shapes, but that that doesn't mean i don't like normal things 😂.</p>
+                    <p>I'm a Sierra Leonean UI/UX designer and front-end developer but i work in Ghana.</p>
+                    <p></p>
                     <p>Normal designs done right can be cool too. but I love making random elements work to give a visually pleasing experience.</p>
                     <p>When i am not coding or daydreaming of crazy designs. I love to read cheesy novels and movies, no genre preference</p>
                     <p>Not the ones that try not to be smart or take themselves seriously, the self aware ones. They know they are bad and they give it all they've got.</p>
-                    <p>I respect that</p>
+                    <p>I respect that!</p>
                     <p>I made my holo-Dave wear glasses coz i want to show you that i am a cool and quirky babe.</p>
                     <p>That was a lie, holo-Dave's eye are creepy and they were lowley staring into my soul.</p> */}
                 </About>
